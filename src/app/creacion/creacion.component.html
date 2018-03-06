@@ -1,0 +1,56 @@
+<div id="banner" class="page-header">
+  <div class="row"> <br/><br/><br/></div>
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-xs-11 col-sm-4">
+      <h1>Crear un usuario</h1>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-xs-12 col-sm-4">
+    <form action="/crear" method="post" role="form" class="form-horizontal">
+      <div class="form-group">
+        <label for="nombre" class="col-xs-10 col-sm-4 control-label">Nombre</label>
+        <div class="col-xs-8 col-sm-12">
+          <input id="nombre" nombre="nombre" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="apellidos" class="col-xs-10 col-sm-4 control-label">Apellidos</label>
+        <div class="col-xs-8 col-sm-12">
+          <input id="apellidos" apellidos="apellidos" class="form-control"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="institución" class="col-xs-10 col-sm-4 control-label">Institucion
+          <select class="form-control">
+            <option>TEC</option>
+            <option>UCR</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </label>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-xs-12 col-sm-6">
+    <input id="Element1" type="radio" name="RadioGroup" checked=""/>Estudiante<br/>
+    <input id="Element2" type="radio" name="RadioGroup"/>Profesor
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-xs-4 col-sm-2"><br/>
+    <button class="btn btn-default pull-right">Registrarse</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3"></div>
+  <div class="col-xs-4 col-sm-6"><br/><a href="/">Volver a la página principal</a></div>
+</div>
