@@ -4,4 +4,4 @@ var universidadSchema = new mongoose.Schema({
 	nombre: {type:String, required:true}
 });
 
-mongoose.model('Universidad', universidadSchema, 'Universidad');
+module.exports = mongoose.model('Universidad', universidadSchema, 'Universidad');

@@ -1,22 +1,26 @@
-var express = require ('express');
-var router = express.Router();
-var ctrlEstudiantes = require('../controllers/estudiantes');
-var ctrlProfesores = require('../controllers/profesores');
-var ctrlUniversidades = require('../controllers/universidades');
+const express = require('express');
+const router = express.Router();
+const ctrlEstudiantes = require('../controllers/estudiantes')
+const ctrlProfesores = require('../controllers/profesores');
+const ctrlUniversidades = require('../controllers/universidades');
 
-router.get('/', function(req, res){
-	res.send('api works');
+router.get('/', function(req, res) {
+  res.send('api works');
 });
 
 //estudiantes
-router.get('/estudiantes/:carnet', ctrlEstudiantes.leerUnEstudiante);
-//router.post('/estudiantes', ctrlEstudiantes.insertarUnEstudiante);
+//router.get('/estudiantes/:carnet', ctrlEstudiantes.leerUnEstudiante);
+
+router.get('/estudiantes', ctrlEstudiantes.getEstudiantes);
+
+
+router.post('/estudiantes', ctrlEstudiantes.insertarUnEstudiante);
 
 //profesores
-router.get('/profesores/:carnet', ctrlProfesores.leerUnProfesor);
+//router.get('/profesores/:carnet', ctrlProfesores.leerUnProfesor);
 
 //universidades
-router.get('/universidades', ctrlUniversidades.leerTodasUniversidades);
+//router.get('/universidades', ctrlUniversidades.leerTodasUniversidades);
 
-
-module.exports  = router;
+router.post('/universidades', ctrlUniversidades.insertarUniversidad);
+module.exports = router;

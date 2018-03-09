@@ -1,6 +1,9 @@
 var mongoose = require('mongoose');
+require('./estudiantes');
+require('./profesores');
+require('./universidades');
 
-var dbURI = 'mongodb://localhost/SRA';
+const dbURI = 'mongodb://localhost/SRA';
 mongoose.Promise = global.Promise;
 
 mongoose.connect(dbURI, function(err){
@@ -8,7 +11,3 @@ mongoose.connect(dbURI, function(err){
 		console.error("Error!" + err);
 	}
 });
-
-require('./estudiantes');
-require('./profesores');
-require('./universidades');

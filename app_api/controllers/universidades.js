@@ -21,3 +21,18 @@ module.exports.leerTodasUniversidades = function (req, res) {
 				sendJsonResponse(res, 200,universidad);
 			});
 }
+
+module.exports.insertarUniversidad = function(req, res) {
+  console.log('Insertar Universidad');
+
+  var newUniversidad = new Universidad();
+  newUniversidad.nombre = req.body.nombre;
+
+  newUniversidad.save(function(err, insertedUniversidad) {
+    if (err) {
+      console.log('Error insertando universidad\n' + err);
+    } else {
+      res.json(insertedUniversidad);
+    }
+  });
+}
