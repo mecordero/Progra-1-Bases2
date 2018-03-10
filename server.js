@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 require('./app_api/models/db');
 
-var routesApi = require('./app_api/routes/index');
+var routesApi = require('./app_api/routes/api');
 
 var port = 3000;
 
@@ -13,8 +13,6 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-
-
 
 app.use('/api', routesApi);
 
